@@ -1,0 +1,268 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  font-family: cairo, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: calc(18px + (26 - 18) * ((100vw - 200px) / (1600 - 300)));
+  line-height: calc(1.6em + (3 - 1.6) * ((100vw - 100px)/(1600 - 300)));
+  position: relative;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: calc(22px + (24 - 22) * ((100vw - 200px) / (1600 - 300)));
+  line-height: calc(1.4em + (1.2 - 1.4) * ((100vw - 100px)/(1600 - 300)));
+  max-width: 40ch;
+  margin-bottom: 5vh;
+}
+
+h1 {
+  font-size: calc(60px + (100 - 60) * ((100vw - 200px) / (1600 - 300)));
+  line-height: calc(0.9em + (0.6 - 0.9) * ((100vw - 100px)/(1600 - 300)));
+  max-width: 9ch;
+  margin-bottom: 5vh;
+}
+
+h2 {
+  font-size: calc(30px + (50 - 30) * ((100vw - 200px) / (1600 - 300)));
+  line-height: calc(1em + (1.5 - 1) * ((100vw - 100px)/(1600 - 300)));
+  max-width: 12ch;
+  margin-bottom: 5vh;
+}
+
+h3 {
+  font-size: calc(20px + (80 - 20) * ((100vw - 200px) / (1600 - 300)));
+  line-height: calc(1em + (1.5 - 1) * ((100vw - 100px)/(1600 - 300)));
+  max-width: 15ch;
+  margin-bottom: 2vh;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  /* Meldung: "Invalid separator in shape definition. It must be a comma." - code für Visually Hidden von Unterricht übernommen */
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper_whole_content {
+  padding: 20px 25px 0 25px;
+}
+
+a {
+  font-size: calc(22px + (24 - 22) * ((100vw - 200px) / (1600 - 300)));
+  line-height: calc(1.4em + (1.2 - 1.4) * ((100vw - 100px)/(1600 - 300)));
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+header, footer {
+  flex-shrink: 0;
+}
+
+html {
+  height: 100%;
+}
+
+.bookmark_logo {
+  width: 100px;
+}
+
+.wrapper_navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10vh;
+}
+
+.burger_icon {
+  width: 40px;
+}
+
+footer a {
+  display: block;
+  margin-bottom: 2vh;
+}
+
+.illustration_floating_girl {
+  display: block;
+  transform: translateX(-150px);
+  margin-bottom: 5vh;
+}
+
+.floating_illu {
+  display: block;
+  width: 150%;
+  transform: translateX(-900px);
+  overflow: visible;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-15px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+#hair {
+  animation: hair 2s infinite alternate linear;
+}
+
+@keyframes hair {
+  0% {
+    transform: scale(0.6);
+    transform: rotateX(-5deg);
+  }
+  50% {
+    transform: rotateX(10deg);
+    transform: scale(1.01);
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: rotateX(2deg);
+    transform: scale(1.002);
+  }
+}
+#blob_bg path {
+  animation: blob_bg 5s infinite alternate-reverse linear;
+}
+
+@keyframes blob_bg {
+  0% {
+    transform: scale(0.5);
+    transform: rotateY(-10deg);
+  }
+  50% {
+    transform: scale(1);
+    transform: rotateY(-15deg);
+  }
+  100% {
+    transform: scale(0.5);
+    transform: rotateY(-5deg);
+  }
+}
+.bg_blob_left {
+  position: absolute;
+  overflow: hidden;
+  width: 500px;
+  top: 800px;
+  left: -300px;
+  z-index: -1;
+}
+
+.bg_blob_right {
+  position: absolute;
+  overflow: hidden;
+  width: 300px;
+  right: 0;
+  top: 1200px;
+  z-index: -1;
+}
+
+.wrapper_form {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 5vh;
+  background-color: white;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=password] {
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 10px;
+  height: 50px;
+  margin-bottom: 5vh;
+  padding-left: 10px;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin-bottom: 5vh;
+  padding-left: 10px;
+}
+
+button {
+  width: 100%;
+  border: 1px solid #C72064;
+  border-radius: 10px;
+  height: 55px;
+  margin-bottom: 5vh;
+  background-color: #C72064;
+  color: white;
+  text-transform: uppercase;
+  font-size: calc(22px + (24 - 22) * ((100vw - 200px) / (1600 - 300)));
+  line-height: calc(1.4em + (1.2 - 1.4) * ((100vw - 100px)/(1600 - 300)));
+}
+
+button:hover {
+  border: 1px solid #C72064;
+  background-color: white;
+  color: #C72064;
+}
+
+.cancel_button {
+  border: 1px solid #C72064;
+  background-color: white;
+  color: #C72064;
+}
+
+.cancel_button:hover {
+  border: 1px solid #C72064;
+  background-color: #C72064;
+  color: white;
+}
+
+label {
+  font-family: cairo, sans-serif;
+  display: block;
+  margin-bottom: 5px;
+  font-size: calc(18px + (24 - 18) * ((100vw - 200px) / (1600 - 300)));
+  line-height: calc(1.4em + (1.2 - 1.4) * ((100vw - 100px)/(1600 - 300)));
+}
+
+.label_for_checkbox {
+  display: inline;
+}
+
+#checkbox_service_privacy_policy {
+  margin-bottom: 5vh;
+}
+
+/*# sourceMappingURL=style.css.map */
