@@ -1,4 +1,15 @@
 footer a {
     display: block;
     margin-bottom: $lowerMarginBottom;
+    font-size: calc(18px + (24 - 18) * ((100vw - 200px) / (1600 - 300)));
+    line-height: calc(1.4em + (1.2 - 1.4) * ((100vw - 100px)/(1600 - 300)));
+}
+
+footer p {
+    font-size: calc(18px + (24 - 18) * ((100vw - 200px) / (1600 - 300)));
+    line-height: calc(1.4em + (1.2 - 1.4) * ((100vw - 100px)/(1600 - 300)));
+}
+
+footer p:last-child {
+    margin-bottom: 0;
 }
