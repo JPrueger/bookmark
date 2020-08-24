@@ -6,6 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="robots" content="noindex,nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="{{ asset('css/css/style.css') }}"/>
 
@@ -21,19 +22,20 @@
 </head>
 <body>
 
-    @include('partials.navbar')
+    <header>
+        @include('partials.navbar')
+    </header>
 
-    @yield('container')
-
-    @include('partials.footer')
-
-    {{-- <div class="container">
-
-        @include('partials.alerts')
-
+    <main>
         @yield('container')
+    </main>
 
-    </div> --}}
-
+    <footer>
+        @include('partials.footer')
+    </footer>
+ 
 </body>
+
+    <script type="text/javascript" src="{{ URL::asset('js/script.js') }}"></script>
+
 </html>
