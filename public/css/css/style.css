@@ -118,7 +118,7 @@ footer p {
 }
 
 footer p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 5vh;
 }
 
 .illustration_floating_girl {
