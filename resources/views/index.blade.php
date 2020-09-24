@@ -36,23 +36,19 @@
 
     <h1>Need a new book?</h1>
 
-    {{-- <img src="{{asset('/images/Logo.svg')}}" alt="background_blob_left"> --}}
-
-    <img src="{{url('/images/logo.svg')}}" alt="background_blob_left">
-
 
     <p>We’ve got you covered … well, actually your friends do. See all their recommendations about all kind of books what you have to read next. Keep your list clear and tick off each book you’ve read!
     </p> 
 
     <div class="blob_bg">
 
-        {{-- <div class="bg_blob_left">
-            <img src="{{asset('storage/app/public/img/bg_blob_left.svg')}}" alt="background_blob_left">
-        </div> --}}
+        <div class="bg_blob_left">
+            <img src="{{asset('/images/bg_blob_left.svg')}}" alt="background_blob_left">
+        </div>
 
-        {{-- <div class="bg_blob_right">
-            <img src="img/bg_blob_right.svg" alt="background_blob">
-        </div> --}}
+        <div class="bg_blob_right">
+            <img src="{{asset('/images/bg_blob_right.svg')}}" alt="background_blob">
+        </div>
 
     </div>
 
